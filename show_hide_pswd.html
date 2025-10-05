@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blue;
+
+        }
+        .input{
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 300px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .input input{
+            width: 90%;
+            padding: 10px 0;
+            border: 0;
+            outline: 0;
+            font-size: 24px;
+                }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <input type="password" placeholder="enter password" id="password">
+        <img src="close_eye.png" width="30px" style="cursor: pointer;" id="eye">
+    </div>
+</body>
+<script>
+    let eye=document.getElementById("eye")
+    let password=document.getElementById("password")
+    eye.onclick=function(){
+        if(password.type=="password"){
+            password.type="text"
+            eye.src="eye.png"
+        }
+        else{
+            password.type="password"
+            eye.src="close_eye.png"
+        }
+    }
+</script>
+</html>
